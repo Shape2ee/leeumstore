@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.wrap {
+  /* padding: 0 4rem; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 4rem;
+  width: 80%;
+}
+
+header {
+  position: static;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 6rem 0;
+}
+
+header .hamberger_menu {
+  display: none;
+  cursor: pointer;
+}
+
+header .hamberger_menu span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+}
+
+header .hamberger_menu span:nth-child(2) {
+  margin: 6px 0;
+}
+
+header .gnb {
+  display: flex;
+}
+
+header .gnb a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: no-repeat center / cover;
+}
+
+header .gnb .login {
+  background-image: url(../images/icon_login.svg);
+  margin-right: 2rem;
+}
+
+header .gnb .basket {
+  background-image: url(../images/icon_cart.svg);
+}
+
+/* //header */
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 6rem 0 0 4rem;
+  width: 20%;
+  height: 100vh;
+  font-size: 1.6rem;
+}
+
+aside h2 a {
+  font-weight: 700;
+}
+
+aside .side_nav {
+  margin: 3rem 0;
+}
+
+aside .side_nav li {
+  padding: 0.8rem 0;
+}
+
+aside a {
+  position: relative;
+  color: #000;
+}
+
+aside a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: all 0.5s;
+}
+
+aside a:hover::after {
+  width: 100%;
+}
+
+/* //aside */
+
+section {
+  margin: 8rem 0;
+}
+
+section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+section ul li a img {
+  margin-bottom: 1.6rem;
+}
+
+section .back_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+section .mouse_event {
+  position: relative;
+}
+
+section .mouse_event:hover .back_img {
+  opacity: 1;
+}
+
+section .title a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .title .right_btn {
+  background: url(../images/icon_next.svg) no-repeat 50% 50% / cover;
+  width: 24px;
+  height: 24px;
+}
+
+.artist h2 a {
+  color: #000;
+}
+
+.artist .art_list,
+.ceramic .caeramic_list {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.artist .art_list li {
+  margin-bottom: 4rem;
+  width: 32%;
+}
+
+.artist .art_list li a,
+.ceramic .caeramic_list li a {
+  display: block;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.artist .more_btn {
+  position: relative;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+}
+
+.artist .more_btn a {
+  display: block;
+  float: right;
+  width: 140px;
+  height: 50px;
+  border: 2px solid #000;
+  line-height: 50px;
+  color: #000;
+}
+
+.artist .more_btn a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.ceramic .caeramic_list li {
+  width: 32%;
+}
+
+footer {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+footer a,
+footer span {
+  margin-right: 1rem;
+  color: #000;
+}
+
+footer .f_menu {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+
+footer .f_menu .inline {
+  display: flex;
+}
+
+footer .f_menu .inline li:last-child a {
+  margin-right: 3rem;
+}
+
+footer .f_menu .f_service {
+  margin-right: 2rem;
+}
+
+footer .block {
+  display: block;
+  margin-top: 1.2rem;
+}
+
+footer .f_company_data {
+  margin-bottom: 6rem;
+}
+
+footer .f_company_data span > a {
+  margin: 0;
+}
+
+footer .f_company_data span > a:hover {
+  text-decoration: underline;
+}
+
+footer .sns_icon {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer .sns_icon a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: no-repeat center / cover;
+}
+
+footer .sns_icon .insta {
+  background-image: url(../images/icon_sns_i.svg);
+}
+
+footer .sns_icon .facebook {
+  background-image: url(../images/icon_sns_f.svg);
+}
+
+footer .sns_icon .youtube {
+  background-image: url(../images/icon_sns_y.svg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrap {
+    width: 100%;
+    padding: 0 4rem;
+  }
+
+  header {
+    align-items: center;
+  }
+
+  header h1 {
+    order: 2;
+  }
+
+  header h1 img {
+    width: 80px;
+  }
+
+  header .hamberger_menu {
+    display: block;
+    order: 1;
+  }
+
+  header .gnb {
+    order: 3;
+  }
+
+  aside {
+    display: none;
+  }
+
+  footer .f_menu {
+    flex-direction: column;
+  }
+
+  footer .f_menu .f_service {
+    margin: 1rem 0;
+  }
+
+  footer .f_company_data > span:nth-child(3) {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .artist .art_list li {
+    width: 48%;
+  }
+
+  footer .f_menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
