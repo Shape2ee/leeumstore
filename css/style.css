@@ -335,6 +335,10 @@ footer .sns_icon .youtube {
     font-size: 50%;
   }
 
+  .wrap {
+    padding: 0 1.5rem;
+  }
+
   .artist .art_list li {
     width: 48%;
   }
