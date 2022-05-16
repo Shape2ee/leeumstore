@@ -129,9 +129,10 @@ aside .x_btn {
   right: 2rem;
 }
 
-aside .x_btn img {
-  width: 100%;
-  object-fit: cover;
+aside .x_btn {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon_close.svg) no-repeat center / cover;
 }
 
 aside .side_nav {
@@ -248,12 +249,13 @@ section .title .right_btn {
 }
 
 .artist .more_btn a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: right;
   width: 140px;
   height: 50px;
   border: 2px solid #000;
-  line-height: 50px;
   color: #000;
 }
 
@@ -337,12 +339,30 @@ footer .sns_icon .youtube {
   background-image: url(../images/icon_sns_y.svg);
 }
 
+#theme_btn {
+  position: fixed;
+  right: 5vw;
+  bottom: 10vh;
+  width: 60px;
+  height: 60px;
+  background: #fff url(../images/ico_night.png) no-repeat center / 50%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+#theme_btn:hover {
+  background-color: #555;
+  background-image: url(../images/ico_night_white.png);
+}
+
 @media only screen and (max-width: 1200px) {
   .wrap {
     width: 100%;
     padding: 0 4rem;
   }
-  
+
   header {
     position: relative;
     align-items: center;
@@ -367,11 +387,11 @@ footer .sns_icon .youtube {
     left: -300px;
     width: 300px;
   }
-  
+
   aside.open {
     left: 0;
     transition: all 0.5s;
-    box-shadow: 1rem 0 5px rgba(0,0,0,0.16);
+    box-shadow: 1rem 0 5px rgba(0, 0, 0, 0.16);
   }
 
   aside .x_btn {
