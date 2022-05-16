@@ -37,19 +37,42 @@ header {
 }
 
 header .hamberger_menu {
-  display: none;
+  position: relative;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
 }
 
 header .hamberger_menu span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   display: block;
   width: 24px;
   height: 2px;
   background-color: #000;
+  transition: all 0.3s;
 }
 
-header .hamberger_menu span:nth-child(2) {
-  margin: 6px 0;
+header .hamberger_menu span::after,
+header .hamberger_menu span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+header .hamberger_menu span::before {
+  bottom: 8px;
+}
+
+header .hamberger_menu span::after {
+  top: 8px;
 }
 
 header .gnb {
@@ -78,17 +101,24 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 6rem 0 0 4rem;
-  width: 20%;
+  padding-top: 6rem;
+  width: 300px;
   height: 100vh;
+  background-color: #fff;
   font-size: 1.6rem;
+  overflow: hidden;
+  z-index: 99;
+  transition: all 0.5s;
 }
 
 aside h2 a {
+  white-space: nowrap;
+  margin-left: 4rem;
   font-weight: 700;
 }
 
 aside .side_nav {
+  margin-left: 4rem;
   margin: 3rem 0;
 }
 
@@ -97,6 +127,7 @@ aside .side_nav li {
 }
 
 aside a {
+  margin-left: 4rem;
   position: relative;
   color: #000;
 }
@@ -115,6 +146,15 @@ aside a::after {
 
 aside a:hover::after {
   width: 100%;
+}
+
+aside .x_btn {
+  position: absolute;
+  top: 6rem;
+  right: 4rem;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 /* //aside */
@@ -303,17 +343,12 @@ footer .sns_icon .youtube {
     width: 80px;
   }
 
-  header .hamberger_menu {
-    display: block;
-    order: 1;
-  }
-
   header .gnb {
     order: 3;
   }
 
   aside {
-    display: none;
+    /* display: none; */
   }
 
   footer .f_menu {
