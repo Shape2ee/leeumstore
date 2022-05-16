@@ -20,12 +20,12 @@
   <body>
     <div class="wrap">
       <header>
-        <h1>
+        <h1 id="logo">
           <a href="#">
             <img src="./images/logo-main.gif" alt="로고" />
           </a>
         </h1>
-        <div class="hamberger_menu" onclick="open_sideNav()">
+        <div class="hamberger_menu" onclick="openNav()">
           <span></span>
         </div>
         <ul class="gnb">
@@ -38,7 +38,12 @@
         </ul>
       </header>
       <aside>
-        <h2><a href="#">LEEUM STORE</a></h2>
+        <h2>
+          <a href="#">LEEUM STORE</a>
+          <div class="x_btn" onclick="openNav()">
+            <img src="./images/icon_close.svg" alt="닫기 버튼">
+          </div>
+        </h2>
         <ul class="side_nav">
           <li><a href="#">PRODUCT</a></li>
           <li><a href="#">EVENT</a></li>
@@ -46,9 +51,6 @@
           <li><a href="#">SEARCH</a></li>
         </ul>
         <a href="#">LEEUM</a>
-        <div class="x_btn" onclick="close_sideNav()">
-          <img src="./images/icon_close.svg" alt="닫기 버튼">
-        </div>
       </aside>
       <section class="visual">
         <img src="./images/main_banner.jpg" alt="main img" />

@@ -36,7 +36,12 @@ header {
   margin: 6rem 0;
 }
 
+header #logo {
+  position: static;
+}
+
 header .hamberger_menu {
+  display: none;
   position: relative;
   width: 24px;
   height: 24px;
@@ -102,19 +107,30 @@ aside {
   top: 0;
   left: 0;
   padding-top: 6rem;
-  width: 0;
+  width: 20%;
   height: 100vh;
   background-color: #fff;
   font-size: 1.6rem;
-  overflow: hidden;
   z-index: 99;
-  transition: all 0.5s;
+}
+
+aside h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem 0 4rem;
 }
 
 aside h2 a {
   white-space: nowrap;
-  margin-left: 4rem;
   font-weight: 700;
+}
+
+aside h2 .x_btn {
+  display: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 aside .side_nav {
@@ -123,13 +139,17 @@ aside .side_nav {
 }
 
 aside .side_nav li {
+  margin-left: 4rem;
   padding: 0.8rem 0;
 }
 
 aside a {
-  margin-left: 4rem;
   position: relative;
   color: #000;
+}
+
+aside > a {
+  margin-left: 4rem;
 }
 
 aside a::after {
@@ -146,15 +166,6 @@ aside a::after {
 
 aside a:hover::after {
   width: 100%;
-}
-
-aside .x_btn {
-  position: absolute;
-  top: 6rem;
-  right: 4rem;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
 }
 
 /* //aside */
@@ -330,25 +341,40 @@ footer .sns_icon .youtube {
     width: 100%;
     padding: 0 4rem;
   }
-
+  
   header {
+    position: relative;
     align-items: center;
   }
 
-  header h1 {
-    order: 2;
+  header #logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   header h1 img {
     width: 80px;
   }
 
-  header .gnb {
-    order: 3;
+  header .hamberger_menu {
+    display: block;
   }
 
   aside {
-    /* display: none; */
+    left: -300px;
+    width: 300px;
+  }
+  
+  aside.open {
+    left: 0;
+    transition: all 0.5s;
+    box-shadow: 1rem 0 5px rgba(0,0,0,0.16);
+  }
+
+  aside h2 .x_btn {
+    display: block;
   }
 
   footer .f_menu {
@@ -372,6 +398,10 @@ footer .sns_icon .youtube {
 
   .wrap {
     padding: 0 1.5rem;
+  }
+
+  aside {
+    font-size: 1.8rem;
   }
 
   .artist .art_list li {
