@@ -341,8 +341,8 @@ footer .sns_icon .youtube {
 
 #theme_btn {
   position: fixed;
-  right: 5vw;
-  bottom: 10vh;
+  right: 3rem;
+  bottom: 4rem;
   width: 60px;
   height: 60px;
   background: #fff url(../images/ico_night.png) no-repeat center / 50%;
@@ -350,6 +350,7 @@ footer .sns_icon .youtube {
   border-radius: 50%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  z-index: 9999;
 }
 
 #theme_btn:hover {
