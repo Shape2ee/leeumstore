@@ -1,95 +1,95 @@
 @charset "utf-8";
 
-body.dark {
+html[data-theme="dark"] body {
   background-color: #1e1e1e;
   color: #fff;
 }
 
-.dark header .hamberger_menu span {
+html[data-theme="dark"] header .hamberger_menu span {
   background-color: #fff;
 }
 
-.dark header .hamberger_menu span::after,
-.dark header .hamberger_menu span::before {
+html[data-theme="dark"] header .hamberger_menu span::after,
+html[data-theme="dark"] header .hamberger_menu span::before {
   background-color: #fff;
 }
 
-.dark header .gnb .login {
+html[data-theme="dark"] header .gnb .login {
   background-image: url(../images/icon_login_w.svg);
 }
 
-.dark header .gnb .basket {
+html[data-theme="dark"] header .gnb .basket {
   background-image: url(../images/icon_cart_w.svg);
 }
 
-.dark aside {
+html[data-theme="dark"] aside {
   background-color: #1e1e1e;
 }
 
-.dark aside a {
+html[data-theme="dark"] aside a {
   color: #fff;
 }
 
-.dark aside a::after {
+html[data-theme="dark"] aside a::after {
   background-color: #fff;
 }
 
-.dark aside .x_btn {
+html[data-theme="dark"] aside .x_btn {
   background-image: url(../images/icon_close_w.svg);
 }
 
-.dark section h2 {
+html[data-theme="dark"] section h2 {
   color: #fff;
 }
 
-.dark .artist h2 a {
+html[data-theme="dark"] .artist h2 a {
   color: #fff;
 }
 
-.dark .artist .art_list li a,
-.dark .ceramic .caeramic_list li a {
+html[data-theme="dark"] .artist .art_list li a,
+html[data-theme="dark"] .ceramic .caeramic_list li a {
   color: #fff;
 }
 
-.dark .artist .more_btn a {
+html[data-theme="dark"] .artist .more_btn a {
   border-color: #fff;
   color: #fff;
 }
 
-.dark .artist .more_btn a:hover {
+html[data-theme="dark"] .artist .more_btn a:hover {
   background-color: #fff;
   color: #333;
 }
 
-.dark footer a,
-.dark footer span {
+html[data-theme="dark"] footer a,
+html[data-theme="dark"] footer span {
   color: #fff;
 }
 
-.dark #theme_btn {
+html[data-theme="dark"] #theme_btn {
   background-color: #333;
   background-image: url(../images/ico_day_white.png);
 }
 
-.dark #theme_btn:hover {
+html[data-theme="dark"] #theme_btn:hover {
   background-color: #fff;
   background-image: url(../images/ico_day.png);
 }
 
-.dark footer .sns_icon .insta {
+html[data-theme="dark"] footer .sns_icon .insta {
   background-image: url(../images/icon_sns_i_W.svg);
 }
 
-.dark footer .sns_icon .facebook {
+html[data-theme="dark"] footer .sns_icon .facebook {
   background-image: url(../images/icon_sns_f_w.svg);
 }
 
-.dark footer .sns_icon .youtube {
+html[data-theme="dark"] footer .sns_icon .youtube {
   background-image: url(../images/icon_sns_y_w.svg);
 }
 
 @media only screen and (max-width: 1200px) {
-  .dark aside {
+  html[data-theme="dark"] aside {
     background-color: #333;
   }
 }
