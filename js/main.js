@@ -3,8 +3,13 @@ function openNav() {
   sideNav.classList.toggle("open");
 }
 
+const osTheme =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: Dark)").matches;
+// console.log(osTheme);
+
 // 로컬스토리지의 다크모드 상태 읽기
-if (localStorage.getItem("theme") === "dark") {
+if (localStorage.getItem("theme") || osTheme === "dark") {
   document.documentElement.dataset.theme = "dark";
 }
 
