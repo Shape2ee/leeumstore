@@ -3,13 +3,18 @@ function openNav() {
   sideNav.classList.toggle("open");
 }
 
+// localStorage.removeItem("theme");
 const osTheme =
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: Dark)").matches;
 // console.log(osTheme);
 
+if (osTheme == true) {
+  document.documentElement.dataset.theme = "dark";
+}
+
 // 로컬스토리지의 다크모드 상태 읽기
-if (localStorage.getItem("theme") || osTheme === "dark") {
+if (localStorage.getItem("theme") === "dark") {
   document.documentElement.dataset.theme = "dark";
 }
 
